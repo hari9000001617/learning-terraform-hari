@@ -26,6 +26,3 @@ resource "aws_s3_bucket" "tf-course" {
   bucket           = "hari-terraform-20250512"
 }
 
-resource "aws_s3_bucket_acl" "tf-course" {
-  acl = "public-read-write"
-}
