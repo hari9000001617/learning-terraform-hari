@@ -17,9 +17,12 @@ data "aws_ami" "app_ami" {
 resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
-
-
   tags = {
     Name = "HelloWorld"
   }
+}
+
+resource "aws_s3_bucket" "tf-course" {
+  bucket           = "hari-terraform-20250512"
+  acl = "public"
 }
