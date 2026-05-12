@@ -24,5 +24,8 @@ resource "aws_instance" "blog" {
 
 resource "aws_s3_bucket" "tf-course" {
   bucket           = "hari-terraform-20250512"
-  aws_s3_bucket_acl = "public-read-write"
+}
+
+resource "aws_s3_bucket_acl" "tf-course" {
+  acl = "public-read-write"
 }
