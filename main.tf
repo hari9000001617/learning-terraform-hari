@@ -21,8 +21,3 @@ resource "aws_instance" "blog" {
     Name = "HelloWorld"
   }
 }
-
-resource "aws_s3_bucket" "tf-course" {
-  bucket           = "hari-terraform-20250512"
-}
-
